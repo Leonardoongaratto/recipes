@@ -1,0 +1,2 @@
+django>=3
+ipython == 7.30.1
