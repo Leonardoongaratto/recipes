@@ -2,3 +2,5 @@ django>=3
 ipython == 7.30.1
 faker
 pillow
+pytest
+pytest-django
