@@ -27,6 +27,10 @@ class RecipeViewsTest(TestCase):
         )
 
 
+    def test_recipe_home_template_loads_recipe(self):
+        ...
+
+
     def test_recipe_category_view_function_is_correct(self):
         view = resolve(
             reverse('recipes:category', kwargs={'category_id': 1000})
