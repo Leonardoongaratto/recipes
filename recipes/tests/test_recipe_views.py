@@ -29,7 +29,7 @@ class RecipeViewsTest(RecipeTestBase):
             response.content.decode('utf-8')
         )
 
-    @skip('WIP')
+    
     def test_recipe_home_template_loads_recipes(self):
         self.make_recipe()
 
