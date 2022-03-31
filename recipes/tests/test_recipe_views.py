@@ -1,6 +1,7 @@
 from django.urls import reverse, resolve
 from recipes import views
-from recipes.models import Category, Recipe, User
+from unittest import skip
+
 from .test_recipe_base import RecipeTestBase
 
 
@@ -28,7 +29,7 @@ class RecipeViewsTest(RecipeTestBase):
             response.content.decode('utf-8')
         )
 
-
+    @skip('WIP')
     def test_recipe_home_template_loads_recipes(self):
         self.make_recipe()
 
