@@ -50,7 +50,7 @@ class RecipeModelTest(RecipeTestBase):
 
     def test_recipe_string_representation(self):
         needed = 'Testing Representation'
-        self.recipe.title = 'Testing Representation '
+        self.recipe.title = 'Testing Representation'
         self.recipe.full_clean()
         self.recipe.save()
         self.assertEqual(
