@@ -1,8 +1,6 @@
-import imp
 from django.http import Http404
 from recipes.models import Recipe
 from django.db.models import Q
-from django.core.paginator import Paginator
 from utils.pagination import make_pagination
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
