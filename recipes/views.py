@@ -1,10 +1,11 @@
+import os
+
 from django.http import Http404
 from recipes.models import Recipe
 from django.db.models import Q
 from utils.pagination import make_pagination
 from django.shortcuts import get_list_or_404, get_object_or_404, render
-
-import os
+from django.contrib import messages
 
 PER_PAGE = int(os.environ.get('PER_PAGE', 4))
 
@@ -15,6 +16,8 @@ def home(request):
     ).order_by('-id')
 
     page_obj, pagination_range = make_pagination(request, recipes, PER_PAGE)
+
+    messages.success(request, 'Epa, você foi pesquisar algo que eu vi.')
     
     return render(request, 'recipes/pages/home.html', context={
         'recipes': page_obj,
