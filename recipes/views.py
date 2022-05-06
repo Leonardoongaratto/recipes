@@ -6,7 +6,7 @@ from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 import os
 
-PER_PAGE = os.environ.get('PER_PAGE', 4)
+PER_PAGE = int(os.environ.get('PER_PAGE', 4))
 
 
 def home(request):
